@@ -1,0 +1,20 @@
+{
+    "tags": { // "tags" 键用于配置标签相关的设置
+        "allowUnknownTags": true // 允许使用未知的标签，即不是预设的标签也可以被接受
+    },
+    "source": { // "source" 键用于配置源代码文件的路径和模式
+        "include": ["./webpackPlugin"], // 指定要包含的源代码文件或目录，这里是包含当前目录下的webpackPlugin目录
+        "includePattern": ".+\\.js$" // 使用正则表达式匹配要包含的文件，这里匹配所有以.js结尾的文件
+    },
+    "plugins": [ // "plugins" 键用于配置要使用的插件列表
+        "plugins/markdown" // 使用名为"markdown"的插件，该插件通常用于解析Markdown格式的文档
+    ],
+    "opts": { // "opts" 键用于配置一些全局选项
+        "destination": "./docs", // 指定生成的文档存放的目录，这里是当前目录下的docs目录
+        "recurse": true // 是否递归地处理包含的目录，这里设置为true表示递归处理
+    },
+    "templates": { // "templates" 键用于配置模板相关的设置
+        "cleverLinks": false, // 是否启用智能链接，设置为false表示不启用
+        "monospaceLinks": false // 是否将链接显示为等宽字体，设置为false表示不显示为等宽字体
+    }
+}
