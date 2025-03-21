@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":";;;AAAA;CACC,kBAAkB;CAClB,gBAAgB;CAChB,aAAa;CACb,uCAAuC;CACvC,aAAa;AACd","sources":["webpack://learndemo/./src/index.css"],"sourcesContent":["#root {\r\n\ttext-align: center;\r\n\tmargin-top: 20px;\r\n\tdisplay: flex;\r\n\tbox-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n\tpadding: 20px;\r\n}\r\n"],"names":[],"sourceRoot":""}
