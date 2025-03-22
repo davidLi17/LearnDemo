@@ -25,7 +25,6 @@ class RemoveConsolePlugin {
                     stage: compilation.PROCESS_ASSETS_STAGE_OPTIMIZE_SIZE, // 指定处理资产的阶段，优化大小阶段
                 },
                 (assets) => {
-                    logger.error("webpackPlugin/RemoveConsolePlugin.js assets::", assets);
                     logger.error("webpackPlugin/RemoveConsolePlugin.js 当前删除console的options::", this.options);
                     // 动态从 compilation 中导入 RawSource 类
                     const { RawSource } = compiler.webpack.sources;

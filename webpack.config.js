@@ -100,7 +100,11 @@ const config = {
             filename: '[name].css',
             chunkFilename: '[id].css'
         }),
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, '/src/index.html'),
+            inject: true,
+            title: 'webpack在线demo'
+        }),
     ],
     devServer: {
         static: {
@@ -108,7 +112,8 @@ const config = {
         },
         port: process.env.PORT || '8088',
         historyApiFallback: true,
-        open: true
+        open: true,
+        hot: true // 启用热更新
     },
     optimization: {
         usedExports: true,

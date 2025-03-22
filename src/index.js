@@ -1,22 +1,22 @@
-//index.js
-import Text from './some.txt'
-import "./index.css"
-import htmlContent from './readme.md';
+import txt from './some.txt';
+import './index.css';
+import md from './readme.md';
+const hello = require('./hello.js');
 
-console.log("src/index.js Text::", Text);
-const hello = require('./hello.js')
-// new RemoveConsolePlugin({
-//     include: ['log', 'error']
-// }),
+// 添加错误处理
+const rootElement = document.querySelector('#root');
+if (!rootElement) {
+    console.error('找不到 root 元素！');
+} else {
+    document.addEventListener('DOMContentLoaded', () => {
+        const rootElement = document.querySelector('#root');
+        if (!rootElement) {
+            console.error('找不到 root 元素！');
+            return;
+        }
 
-// 源代码
-console.log("log:这个会被移除");
-console.info("info:这个会被移除");
-console.error("error相关信息会被保留.");
-const a = 1;
-console.warn("警告信息可以选择性保留");
-
-// index.js
-document.querySelector('#root').appendChild(htmlContent);
-
-document.querySelector('#root').appendChild(hello())
+        rootElement.appendChild(md());
+        rootElement.appendChild(txt);
+        rootElement.appendChild(hello());
+    });
+}
