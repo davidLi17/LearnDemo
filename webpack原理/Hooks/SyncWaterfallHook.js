@@ -1,5 +1,5 @@
 // index.js
-import Resgiter from './Resgiter'
+import Resgiter from '../Resgiter'
 const resgiter = new Resgiter()
 
 // 某团队包含ABC三人，计算再一次比赛中三人的总得分
